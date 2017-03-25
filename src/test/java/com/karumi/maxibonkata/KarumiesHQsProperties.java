@@ -6,13 +6,11 @@ import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 
 import org.junit.Before;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
@@ -57,7 +55,7 @@ import static org.mockito.Mockito.verify;
         karumiHQs.openFridge(developer);
 
         System.out.println(karumiHQs);
-        verify(chat,never()).sendMessage(any());
+        verify(chat, never()).sendMessage(any());
     }
 
 }
