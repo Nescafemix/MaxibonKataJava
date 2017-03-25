@@ -44,8 +44,6 @@ public class KarumiHQs {
       if (shouldBuyMoreMaxibons()) {
         notifyWeShouldBuyMaxibon(developer);
         buyMaxibons();
-      } else {
-        notifyIGotMaxibons(developer);
       }
     }
   }
@@ -62,14 +60,7 @@ public class KarumiHQs {
   }
 
   private void notifyWeShouldBuyMaxibon(Developer developer) {
-    chat.sendMessage("Hi guys, I'm " + developer.getName()
-            + ". I wanted " + developer.getNumberOfMaxibonsToGrab()
-            + " Maxibons. Now there are " + maxibonsLeft + " Maxibons. We need more maxibons!");
-  }
-
-  private void notifyIGotMaxibons(Developer developer) {
-    chat.sendMessage("Hi guys, I'm " + developer.getName() + " and I took "
-            + developer.getNumberOfMaxibonsToGrab() + " Maxibons!");
+    chat.sendMessage("Hi guys, I'm " + developer.getName() + ". We need more maxibons!");
   }
 
   private void buyMaxibons() {
